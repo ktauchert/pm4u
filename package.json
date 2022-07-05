@@ -1,0 +1,39 @@
+{
+  "name": "pm4u",
+  "version": "1.0.0",
+  "description": "pm inspired by traversy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktauchert/pm4u.git"
+  },
+  "keywords": [
+    "pm",
+    "gantt",
+    "graphql",
+    "mongodb"
+  ],
+  "author": "Karsten Tauchert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktauchert/pm4u/issues"
+  },
+  "homepage": "https://github.com/ktauchert/pm4u#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "mongoose": "^6.4.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.18"
+  }
+}
