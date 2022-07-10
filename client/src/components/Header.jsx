@@ -1,20 +1,21 @@
-import logo from "./assets/logo.png";
+import logo from "./assets/cat-logo_white_bg.png";
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
 
 export default function Header() {
     return (
-        <nav className="navbar bg-light mb-4 p-0">
-            <div className="container">
-                <a href="/" className="navbar-brand">
-                    <div className="d-flex">
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+                <Toolbar>
+                    <IconButton edge="start" aria-label="logo" sx={{ mr: 2 }}>
                         <img
                             src={logo}
                             alt="Logo"
-                            className="mr-2 brand-logo"
+                            className="mr-2 brand-logo rounded"
                         />
-                        <div className="nav-title">Project Management 4 U</div>
-                    </div>
-                </a>
-            </div>
-        </nav>
+                    </IconButton>
+                    <Typography>Project Management 4 U</Typography>
+                </Toolbar>
+            </AppBar>
+        </Box>
     );
 }

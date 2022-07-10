@@ -2,6 +2,7 @@ import { FaTrash } from "react-icons/fa";
 import { useMutation } from "@apollo/client";
 import { DELETE_CLIENT } from "../mutations/clientMutations";
 import { GET_CLIENTS } from "../queries/clientQueries";
+import { Button, TableCell, TableRow } from "@mui/material";
 
 export default function ClientRow({ client }) {
     const [deleteClient] = useMutation(DELETE_CLIENT, {
@@ -23,19 +24,15 @@ export default function ClientRow({ client }) {
     });
 
     return (
-        <tr>
-            <td scope="row">{client.name}</td>
-            <td>{client.email}</td>
-            <td>{client.phone}</td>
-            <td>
-                <button
-                    type="button"
-                    className="btn btn-danger btn-sm"
-                    onClick={deleteClient}
-                >
+        <TableRow>
+            <TableCell>{client.name}</TableCell>
+            <TableCell>{client.phone}</TableCell>
+            <TableCell>{client.email}</TableCell>
+            <TableCell>
+                <Button onClick={deleteClient}>
                     <FaTrash />
-                </button>
-            </td>
-        </tr>
+                </Button>
+            </TableCell>
+        </TableRow>
     );
 }
